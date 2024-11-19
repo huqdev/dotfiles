@@ -4,11 +4,9 @@
   inputs,
   lib,
   ...
-}:
-let
+}: let
   moduleConfig = builtins.fromJSON (builtins.readFile ../config/waybar/config.json);
-in 
-{
+in {
   home.file = {
     ".config/waybar/style.css".source = ../config/waybar/style.css;
   };
@@ -17,25 +15,27 @@ in
 
   programs.waybar.enable = true;
   programs.waybar.settings = {
-    mainBar = {
-      height = 30;
-      layer = "top";
-      modules-left = [
-        "clock"
-        "network"
-        "pulseaudio"
-        "backlight"
-      ];
-      modules-center = [
-        "hyprland/workspaces"
-      ];
-      modules-right = [
-        "cpu"
-        "temperature"
-        "memory"
-        "battery"
-      ];
-    }
-    // moduleConfig;
+    mainBar =
+      {
+        height = 30;
+        exclusive = true;
+        reload_style_on_change = true;
+        modules-left = [
+          "clock"
+          "network"
+          "pulseaudio"
+          "backlight"
+        ];
+        modules-center = [
+          "hyprland/workspaces"
+        ];
+        modules-right = [
+          "cpu"
+          "temperature"
+          "memory"
+          "battery"
+        ];
+      }
+      // moduleConfig;
   };
 }
