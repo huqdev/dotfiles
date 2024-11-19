@@ -7,7 +7,9 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    ./easyroam.nix
     inputs.xfaf.nixosModules.xfaf
+    inputs.nix-easyroam.nixosModules.nix-easyroam
   ];
 
   xfaf.nixconfig = {
@@ -36,7 +38,7 @@
 
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/framer.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/pop.yaml";
     image = pkgs.fetchurl {
       url = "https://cdn.pixabay.com/photo/2021/12/31/11/51/penguin-6905568_1280.jpg";
       hash = "sha256-SOL1PwXIzq5iLyJZEXemHZw/tR4rE+dct/G2RIMIqzg=";
@@ -66,16 +68,6 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  services.xserver.enable = true;
-
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  services.xserver.xkb = {
-    layout = "de";
-    variant = "";
-  };
-
   console.keyMap = "de";
 
   services.printing.enable = true;
@@ -92,8 +84,16 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    swaylock
     # PUT YOUR PACKAGES HERE
   ];
+
+  security.pam.services.swaylock = {
+    text = ''
+      auth sufficient pam_fprintd.so
+      auth include login
+    '';
+  };
 
   specialisation = {
     perfomance.configuration = {

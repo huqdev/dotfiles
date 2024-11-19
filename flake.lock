@@ -106,7 +106,7 @@
     },
     "betterfox_2": {
       "inputs": {
-        "nixpkgs": "nixpkgs_7"
+        "nixpkgs": "nixpkgs_8"
       },
       "locked": {
         "lastModified": 1728600064,
@@ -328,11 +328,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1730016908,
-        "narHash": "sha256-bFCxJco7d8IgmjfNExNz9knP8wvwbXU4s/d53KOK6U0=",
+        "lastModified": 1731887066,
+        "narHash": "sha256-uw7K/RsYioJicV79Nl39yjtfhdfTDU2aRxnBgvFhkZ8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e83414058edd339148dc142a8437edb9450574c8",
+        "rev": "f3a2ff69586f3a54b461526e5702b1a2f81e740a",
         "type": "github"
       },
       "original": {
@@ -404,6 +404,24 @@
       "original": {
         "owner": "marchcraft",
         "repo": "dotfiles",
+        "type": "github"
+      }
+    },
+    "nix-easyroam": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1731882842,
+        "narHash": "sha256-Kkw4QopPkJ3OvkgnwZlPmBeB6XyyidYI8MwHZ7jGeZQ=",
+        "owner": "0x5a4",
+        "repo": "nix-easyroam",
+        "rev": "445025053a7317746492f678562396e56a806880",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0x5a4",
+        "repo": "nix-easyroam",
         "type": "github"
       }
     },
@@ -659,6 +677,22 @@
     },
     "nixpkgs_6": {
       "locked": {
+        "lastModified": 1731139594,
+        "narHash": "sha256-IigrKK3vYRpUu+HEjPL/phrfh7Ox881er1UEsZvw9Q4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "76612b17c0ce71689921ca12d9ffdc9c23ce40b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
         "lastModified": 1730785428,
         "narHash": "sha256-Zwl8YgTVJTEum+L+0zVAWvXAGbWAuXHax3KzuejaDyo=",
         "owner": "nixos",
@@ -673,7 +707,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_7": {
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1723362943,
         "narHash": "sha256-dFZRVSgmJkyM0bkPpaYRtG/kRMRTorUIDj8BxoOt1T4=",
@@ -689,7 +723,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_8": {
+    "nixpkgs_9": {
       "locked": {
         "lastModified": 1729880355,
         "narHash": "sha256-RP+OQ6koQQLX5nw0NmcDrzvGL8HDLnyXt/jHhL1jwjM=",
@@ -794,7 +828,8 @@
       "inputs": {
         "home-manager": "home-manager",
         "marchcraft": "marchcraft",
-        "nixpkgs": "nixpkgs_6",
+        "nix-easyroam": "nix-easyroam",
+        "nixpkgs": "nixpkgs_7",
         "xfaf": "xfaf"
       }
     },
@@ -1024,7 +1059,7 @@
         "hardware": "hardware",
         "home-manager": "home-manager_3",
         "nix-on-droid": "nix-on-droid",
-        "nixpkgs": "nixpkgs_8",
+        "nixpkgs": "nixpkgs_9",
         "nur": "nur_2",
         "sops": "sops_2",
         "stylix": "stylix",

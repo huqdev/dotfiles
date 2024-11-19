@@ -7,6 +7,10 @@
 }: {
   imports = [
     inputs.xfaf.homeModules.xfaf
+    ../../mod/hyprland.nix
+    ../../mod/swayidle.nix
+    ../../mod/waybar.nix
+    ../../mod/nvim.nix
   ];
 
   xfaf.shell = {
@@ -30,14 +34,6 @@
     openTmux = true;
   };
 
-  xfaf.neovim = {
-    enable = true;
-    makeDefault = true;
-    extraLsps = [
-      pkgs.nodePackages.typescript-language-server
-    ];
-  };
-
   programs.firefox.enable = true;
   programs.git.enable = true;
 
@@ -46,6 +42,8 @@
   };
 
   home.packages = with pkgs; [
+    pamixer
+    brightnessctl
     thunderbird
     vesktop
     element-desktop
@@ -56,17 +54,10 @@
     gradle
     prismlauncher
     libreoffice-qt
+    rofi-wayland
     (nerdfonts.override {fonts = ["NerdFontsSymbolsOnly"];})
     texliveFull
-
-    wlinhibit
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-xapp
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-wlr
-    wl-clipboard
-    hyprcursor
+    hyprland
   ];
 
   home.shellAliases = {
