@@ -3,13 +3,19 @@
   pkgs,
   inputs,
   lib,
+  outputs,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
     ./easyroam.nix
+    ../../mod/nixos/greeter.nix
     inputs.xfaf.nixosModules.xfaf
     inputs.nix-easyroam.nixosModules.nix-easyroam
+  ];
+
+  nixpkgs.overlays = [
+    outputs.overlays.additions
   ];
 
   xfaf.nixconfig = {

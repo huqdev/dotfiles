@@ -28,7 +28,7 @@
     forAllSystems = lib.genAttrs systems;
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
-
+    overlays = import ./overlays.nix { inherit inputs; };
     nixosConfigurations.esgaroth = lib.nixosSystem {
       specialArgs = {
         inherit outputs;
