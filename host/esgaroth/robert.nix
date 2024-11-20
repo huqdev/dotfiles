@@ -11,6 +11,7 @@
     ../../mod/swayidle.nix
     ../../mod/waybar.nix
     ../../mod/nvim.nix
+    ../../mod/rbw.nix
   ];
 
   xfaf.shell = {
@@ -55,6 +56,8 @@
     prismlauncher
     libreoffice-qt
     rofi-wayland
+    rofi-rbw-wayland
+    pinentry-rofi
     (nerdfonts.override {fonts = ["NerdFontsSymbolsOnly"];})
     texliveFull
     hyprland
