@@ -1,5 +1,4 @@
 {
-  "mainMod": "SUPER",
   "bindm": [
     "$mainMod, mouse:272, movewindow",
     "$mainMod, mouse:273, resizewindow"
@@ -22,10 +21,10 @@
     "$mainMod, f, fullscreen, 1",
     "$mainMod SHIFT, f, fullscreen, 0",
 
-    "$mainMod ALT, h, swapwindow, l",
-    "$mainMod ALT, l, swapwindow, r",
-    "$mainMod ALT, j, swapwindow, d",
-    "$mainMod ALT, k, swapwindow, u",
+    "$mainMod SHIFT, h, swapwindow, l",
+    "$mainMod SHIFT, l, swapwindow, r",
+    "$mainMod SHIFT, j, swapwindow, d",
+    "$mainMod SHIFT, k, swapwindow, u",
 
     "$mainMod SHIFT, 1, movetoworkspacesilent, 1",
     "$mainMod SHIFT, 2, movetoworkspacesilent, 2",
