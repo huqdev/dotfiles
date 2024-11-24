@@ -32,8 +32,21 @@ in {
         };
         workspace = builtins.map (number: "${builtins.toString number}, monitor:eDP-1") (lib.range 1 9);
 
-        windowrulev2 = "workspace:5, class:(StardewModdingAPI)";
+        windowrule = [
+          "workspace 1 silent,kitty"
           
+          "workspace 2 silent,thunderbird"
+          "workspace 2 silent,vesktop"
+          "workspace 2 silent,Element"
+          
+          "workspace 3 silent,firefox"
+          
+          "workspace 4 silent,steam"
+          
+          "workspace 5 silent,StardewModdingAPI"
+        ];
+
+        "$mainMod" = "SUPER";
       }
       // binds;
 
