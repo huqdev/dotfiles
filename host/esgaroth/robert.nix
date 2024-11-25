@@ -12,6 +12,7 @@
     ../../mod/waybar.nix
     ../../mod/nvim.nix
     ../../mod/rbw.nix
+    ../../mod/git.nix
   ];
 
   xfaf.shell = {
@@ -23,12 +24,6 @@
 
   xfaf.btop.enable = true;
   xfaf.tmux.enable = true;
-
-  xfaf.git = {
-    enable = true;
-    userName = "Robert Steig";
-    userEmail = "huq88dev@hhu.de";
-  };
 
   xfaf.desktop.apps.kitty = {
     enable = true;
