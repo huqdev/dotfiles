@@ -71,7 +71,7 @@
   services.ssh-agent.enable = true;
   programs.ssh.extraConfig = ''
     AddKeysToAgent yes
-    IdentityFile ~/.ssh/key
+    IdentityFile ~/.ssh/id_rsa
   '';
 
   home.stateVersion = "24.05";
