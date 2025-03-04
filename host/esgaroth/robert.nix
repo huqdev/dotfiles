@@ -56,6 +56,9 @@
     (nerdfonts.override {fonts = ["NerdFontsSymbolsOnly"];})
     texliveFull
     hyprland
+    gnumake
+    wineWayland
+    lutris
   ];
 
   home.shellAliases = {
@@ -67,10 +70,19 @@
     name = "Monocraft Nerd Font Complete";
   };
 
+
   programs.ssh.enable = true;
   services.ssh-agent.enable = true;
+  programs.ssh.addKeysToAgent = "yes";
+  programs.ssh.matchBlocks  = {
+    "fscs.hhu.de" = {
+      forwardAgent = true;
+    };
+    "minecraft-fsphy.de" = {
+      forwardAgent = true;
+    };
+  };
   programs.ssh.extraConfig = ''
-    AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
   '';
 

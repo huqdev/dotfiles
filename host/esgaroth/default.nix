@@ -89,9 +89,20 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-qt;
+  };
+  virtualisation.docker.enable = true;
+  users.users.robert.extraGroups = ["docker"];
+
   environment.systemPackages = with pkgs; [
-    swaylock
     # PUT YOUR PACKAGES HERE
+    hyprshot
+    swaylock
+    gnupg
+    pinentry-qt
   ];
 
   security.pam.services.swaylock = {

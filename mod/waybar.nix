@@ -34,6 +34,7 @@ in {
           "temperature"
           "memory"
           "battery"
+          "tray"
         ];
       }
       // moduleConfig;

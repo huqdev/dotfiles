@@ -17,7 +17,7 @@
       "on-scroll-up": "brightnessctl set 1%+"
   },
   "clock": {
-    "format": "  {:%R %d/%m}"
+    "format": "  {:%R %d.%m}"
   },
   "cpu": {
     "format": "{icon0}{icon1}{icon2}{icon3} {usage:>2}% ",
