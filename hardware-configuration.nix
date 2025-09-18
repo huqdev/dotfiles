@@ -19,7 +19,10 @@
     fsType = "ext4";
   };
 
+  # encryption
+  # 2 disks, swap and normal
   boot.initrd.luks.devices."luks-cdf1a728-5fd1-4a60-af4e-04eec5702f97".device = "/dev/disk/by-uuid/cdf1a728-5fd1-4a60-af4e-04eec5702f97";
+  boot.initrd.luks.devices."luks-3ec07424-6915-48e2-ae7d-57fd0e34e1c8".device = "/dev/disk/by-uuid/3ec07424-6915-48e2-ae7d-57fd0e34e1c8";
 
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/89CD-31C6";

@@ -60,9 +60,24 @@
     password = "test";
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  home-manager.users.robert = ./robert.nix;
+    
 
+  programs.fish.enable = true;
+  programs.steam.enable = true;
+  users.defaultUserShell = pkgs.fish;
+  
+  boot.supportedFilesystems = ["ntfs"];
+  boot.plymouth.enable = true;
+  boot.loader.timeout = lib.mkForce 3;
+  
+  hardware.bluetooth.enable = true;
+  services.thermald.enable = true;
+  
+  virtualisation.docker.enable = true;
+
+  # allow swaylock to check if a given password is valid. empty {} for some fcking reason
+  security.pam.services.swaylock = {};
   
   environment.systemPackages = with pkgs; [
   ];
