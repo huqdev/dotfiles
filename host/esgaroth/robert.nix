@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./mod/hyprland.nix
+    ../../mod/hyprland.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

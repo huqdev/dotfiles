@@ -9,7 +9,7 @@
   outputs = { self, nixpkgs, home-manager}: {
     nixosConfigurations.esgaroth = nixpkgs.lib.nixosSystem {
       modules = [
-      ./configuration.nix 
+      ./host/esgaroth/configuration.nix 
       home-manager.nixosModules.home-manager
       ];
     };
