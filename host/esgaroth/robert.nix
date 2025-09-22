@@ -24,7 +24,7 @@
     prismlauncher
     libreoffice-qt
     rofi
-    rofi-rbw
+    rofi-rbw-wayland
     pinentry-rofi
     texliveFull
     hyprland
