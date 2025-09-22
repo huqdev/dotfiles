@@ -3,5 +3,6 @@
     ./nvim.nix
     ./hyprland.nix
     ./rbw.nix
+    ./git.nix
   ];
 }
