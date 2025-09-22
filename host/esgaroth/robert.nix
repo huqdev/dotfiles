@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ../../mod/hyprland.nix
+    ../../mod/nvim.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
