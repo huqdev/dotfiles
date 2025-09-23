@@ -4,5 +4,6 @@
     ./hyprland.nix
     ./rbw.nix
     ./git.nix
+    ./waybar.nix
   ];
 }
