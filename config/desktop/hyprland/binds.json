@@ -50,7 +50,7 @@
 
     "$mainMod, p, exec, hyprshot -o /home/robert/Documents/screenshot -m region",
 
-    "$mainMod, s, exec, loginctl lock-session"
+    "$mainMod, s, exec, swaylock"
   ],
 
   "binde": [

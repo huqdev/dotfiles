@@ -5,5 +5,6 @@
     ./rbw.nix
     ./git.nix
     ./waybar.nix
+    ./swayidle.nix
   ];
 }
