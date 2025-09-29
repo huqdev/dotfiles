@@ -11,7 +11,10 @@ in {
     ".config/waybar/style.css".source = ../config/desktop/waybar/style.css;
   };
 
+
   programs.waybar.enable = true;
+
+  stylix.targets.waybar.enable = false;
   programs.waybar.settings = {
     mainBar =
       {

@@ -61,12 +61,19 @@
     password = "test";
   };
 
-  home-manager.users.robert = ./robert.nix;
-    
-
   programs.fish.enable = true;
   programs.steam.enable = true;
   users.defaultUserShell = pkgs.fish;
+  home-manager.users.robert = ./robert.nix;
+    
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/phd.yaml";
+    image = pkgs.fetchurl {
+      url = "https://cdn.pixabay.com/photo/2021/12/31/11/51/penguin-6905568_1280.jpg";
+      hash = "sha256-SOL1PwXIzq5iLyJZEXemHZw/tR4rE+dct/G2RIMIqzg=";
+    };
+  };
   
   boot.supportedFilesystems = ["ntfs"];
   boot.plymouth.enable = true;
