@@ -39,7 +39,8 @@
 
   programs.ssh.enable = true;
   services.ssh-agent.enable = true;
-  programs.ssh.addKeysToAgent = "yes";
+  programs.ssh.matchBlocks."*".addKeysToAgent = "yes";
+  programs.ssh.enableDefaultConfig = true;
   programs.ssh.extraConfig = ''
     IdentityFile ~/.ssh/id_rsa
   '';
