@@ -2,6 +2,7 @@
 {
   imports = [
     ./starship.nix
+    ./fish.nix
   ];
   
   home.packages = with pkgs; 
@@ -45,6 +46,7 @@
       rm = "rm -Iv";
       df = lib.getExe pkgs.duf;
       cp = lib.getExe pkgs.xcp;
+      cb = "cd ..";
       # git
       gs = "${lib.getExe pkgs.git} status -sb";
       gd = "${lib.getExe pkgs.git} diff";
