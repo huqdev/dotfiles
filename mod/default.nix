@@ -6,5 +6,6 @@
     ./git.nix
     ./waybar.nix
     ./swayidle.nix
+    ./shell
   ];
 }
