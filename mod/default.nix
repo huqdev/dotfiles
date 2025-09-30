@@ -7,5 +7,6 @@
     ./waybar.nix
     ./swayidle.nix
     ./shell
+    ./rofi
   ];
 }
