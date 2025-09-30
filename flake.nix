@@ -12,6 +12,7 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-easyroam.url = "github:0x5a4/nix-easyroam";
   };
 
   outputs = {
@@ -20,6 +21,7 @@
     home-manager,
     stylix,
     sops-nix,
+    nix-easyroam,
   }: {
     nixosConfigurations.esgaroth = nixpkgs.lib.nixosSystem {
       modules = [
@@ -27,6 +29,7 @@
         home-manager.nixosModules.home-manager
         stylix.nixosModules.stylix
         sops-nix.nixosModules.sops
+        nix-easyroam.nixosModules.nix-easyroam
       ];
     };
   };

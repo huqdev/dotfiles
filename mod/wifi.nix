@@ -17,4 +17,16 @@
       }; # this won't leak into /nix/store
     };
   };
+  sops.secrets.easyroam = {
+    sopsFile = ../secrets/easyroam.p12;
+    format = "binary";
+  };
+  
+  services.easyroam = {
+    enable = true;
+    pkcsFile = config.sops.secrets.easyroam.path;
+    wpa-supplicant = {
+      enable = true;
+    };
+  };
 }
