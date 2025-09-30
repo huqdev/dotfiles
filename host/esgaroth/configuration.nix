@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../mod/wifi.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -19,8 +20,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "esgaroth"; # Define your hostname.
-  # Pick only one of the below networking options.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -86,8 +85,11 @@
 
   # allow swaylock to check if a given password is valid. empty {} for some fcking reason
   security.pam.services.swaylock = {};
+
+  sops.age.keyFile = "/home/robert/.config/sops/age/keys.txt";
   
   environment.systemPackages = with pkgs; [
+    sops
   ];
 
   # This option defines the first version of NixOS you have installed on this particular machine,

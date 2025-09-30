@@ -1,0 +1,7 @@
+keys:
+  - &robert age1rxhksp82qlalaep0jcftkt9hw94dqqpg4wm4tzke43m5zsgz2s6s3q6egs
+creation_rules: 
+   - path_regex: secrets/.*$
+     key_groups:
+     - age:
+       - *robert

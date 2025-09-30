@@ -8,14 +8,25 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix}: {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    sops-nix,
+  }: {
     nixosConfigurations.esgaroth = nixpkgs.lib.nixosSystem {
       modules = [
-      ./host/esgaroth/configuration.nix 
-      home-manager.nixosModules.home-manager
-      stylix.nixosModules.stylix
+        ./host/esgaroth/configuration.nix
+        home-manager.nixosModules.home-manager
+        stylix.nixosModules.stylix
+        sops-nix.nixosModules.sops
       ];
     };
   };
