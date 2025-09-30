@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{config, pkgs, lib, ...}: {
   imports = [
     ../../mod/default.nix
   ];
@@ -7,8 +7,14 @@
 
   programs.firefox.enable = true;
   programs.git.enable = true;
-  programs.kitty.enable = true;
 
+  stylix.fonts.sizes.terminal = 9;
+  
+  programs.kitty = {
+    enable = true;
+    font.size = config.stylix.fonts.sizes.terminal;
+  };
+  
   home.packages = with pkgs; [
     pamixer
     brightnessctl

@@ -18,9 +18,9 @@ in {
         };
 
         general = {
-          border_size = 2;
-          gaps_in = 2;
-          gaps_out = 2;
+          border_size = 1;
+          gaps_in = 0;
+          gaps_out = 0;
         };
 
         misc = {
@@ -28,10 +28,11 @@ in {
         };
 
         decoration = {
-          rounding = 10;
-          inactive_opacity = 0.95;
+          rounding = 5;
+          inactive_opacity = 0.90;
         };
-        workspace = builtins.map (number: "${builtins.toString number}, monitor:eDP-1") (lib.range 1 8);
+        
+        workspace = builtins.map (number: "${builtins.toString number}, monitor:eDP-1") (lib.range 1 9);
 
         # windowrule = [
         #   # "workspace 1 silent,kitty"

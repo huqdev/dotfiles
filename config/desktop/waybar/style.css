@@ -2,6 +2,8 @@
     border: none;
     border-radius: 0;
     font-family: Symbols Nerd Font, monospace;
+    font-size: 12px;
+    min-height: 0;
     font-weight: bold;
 }
 
