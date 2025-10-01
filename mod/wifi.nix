@@ -15,6 +15,10 @@
         # safe version of the above: read PSK from the
         pskRaw = "ext:HHUDY"; # variable psk_echelon, defined in secretsFile,
       }; # this won't leak into /nix/store
+
+      Vodafone-6F04 = {
+        pskRaw = "ext:VODAFONEHOME";
+      };
     };
   };
   sops.secrets.easyroam = {
