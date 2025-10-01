@@ -1,0 +1,5 @@
+# vm disk image stage
+*.qcow2
+
+# vm binary simlink
+result
