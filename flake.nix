@@ -2,8 +2,7 @@
   description = "roberts's nixos config. ein satz mit x, das war wohl nix";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     xfaf.url = "github:0x5a4/dotfiles/8f5f6242c6094bd9bb81daf92a1d7436a171bf71";
     marchcraft.url = "github:marchcraft/dotfiles";
     nix-easyroam.url = "github:0x5a4/nix-easyroam";

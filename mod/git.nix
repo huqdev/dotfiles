@@ -8,6 +8,7 @@
 
     home.packages = [
       pkgs.git-absorb
+      config.scheme.check 
     ];
 
     programs.git = {
