@@ -24,7 +24,7 @@
     wl-clipboard
     jetbrains.idea-ultimate
     spotify
-    openjdk21
+    openjdk
     gradle
     prismlauncher
     libreoffice-qt
@@ -36,8 +36,13 @@
     gnumake
     wineWayland
     lutris
+    hyprshot
   ];
 
+  programs.nh = {
+    enable = true;
+  };
+  
   programs.ssh.enable = true;
   services.ssh-agent.enable = true;
   programs.ssh.matchBlocks."*".addKeysToAgent = "yes";
