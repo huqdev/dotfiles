@@ -11,8 +11,8 @@
     ];
 
     programs.git = {
-      userName = "huqdev";
-      userEmail = "huq88dev@hhu.de";
+      userName = "Robert Steig";
+      userEmail = "huqdev@users.noreply.github.com";
 
       enable = true;
 
