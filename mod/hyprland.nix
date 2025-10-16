@@ -38,24 +38,6 @@ in {
         
         workspace = builtins.map (number: "${builtins.toString number}, monitor:eDP-1") (lib.range 1 9);
 
-        # windowrule = [
-        #   # "workspace 1 silent,kitty"
-          
-        #   "workspace 2 silent,thunderbird"
-        #   "workspace 2 silent,vesktop"
-        #   "workspace 2 silent,Element"
-          
-        #   "workspace 3 silent,firefox"
-          
-        #   "workspace 4 silent,steam"
-          
-        #   "workspace 5 silent,StardewModdingAPI"
-        # ];
-
-        windowrulev2 = [
-        "workspace 1 silent, class:kitty, title:^(btop)"
-        "float, class:kitty, title:btop"
-        ];
 
         "$mainMod" = "SUPER";
       }
