@@ -27,6 +27,10 @@ in {
           new_window_takes_over_fullscreen = 2;
         };
 
+        binds = {
+          movefocus_cycles_fullscreen = true;
+        };
+
         decoration = {
           rounding = 5;
           inactive_opacity = 0.90;
