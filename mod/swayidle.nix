@@ -5,16 +5,20 @@
   lib,
   ...
 }: {
+  stylix.targets.swaylock.enable = false;
   programs.swaylock = {
     enable = true;
-    package = pkgs.swaylock-effects;
+    package = pkgs.swaylock;
     settings = {
-      effect-blur = "20x3";
-      clock = true;
+      image = ../config/desktop/lockscreen.png;
       ignore-empty-password = true;
       daemonize = true;
       show-failed-attempts = true;
-      screenshots = true;
+      indicator-caps-lock = true;
+      indicator-idle-visible = true;
+      indicator-radius = 80;
+      indicator-x-position = 1700;
+      indicator-y-position = 200;
     };
   };
   
