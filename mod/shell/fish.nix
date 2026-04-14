@@ -8,7 +8,6 @@
         autopair # auto complete pairs like "", (), []
         colored-man-pages
         puffer # expand .... to ../..
-        sponge # keep history clear of failed commands and typos
         ## foreign-env  # something about env variables. i dont get it yet,
                         # so it stays disabled for now
         grc

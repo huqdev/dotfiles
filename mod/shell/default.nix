@@ -55,5 +55,7 @@
       gaa = "${lib.getExe pkgs.git} add --all";
       gl = "${lib.getExe pkgs.git} lg";
       gcm = "${lib.getExe pkgs.git} commit -m";
+      # vpn
+      hhuvpn = "sudo openvpn --config /run/secrets/vpnconfig";
   };
 }

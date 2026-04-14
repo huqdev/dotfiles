@@ -7,8 +7,9 @@
 
   programs.firefox.enable = true;
   programs.git.enable = true;
+  programs.direnv.enable = true;
 
-  stylix.fonts.sizes.terminal = 9;
+  stylix.fonts.sizes.terminal = 10;
   
   programs.kitty = {
     enable = true;
@@ -16,16 +17,18 @@
   };
   
   home.packages = with pkgs; [
+    kdePackages.kate
     pamixer
     brightnessctl
     thunderbird
     vesktop
     element-desktop
     wl-clipboard
-    jetbrains.idea-ultimate
+    jetbrains.idea
     spotify
-    openjdk
+    javaPackages.compiler.openjdk25
     gradle
+    orca
     prismlauncher
     libreoffice-qt
     rofi
@@ -34,7 +37,7 @@
     texliveFull
     hyprland
     gnumake
-    wineWayland
+    wine-wayland
     lutris
     hyprshot
   ];

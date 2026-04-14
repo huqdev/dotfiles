@@ -7,10 +7,10 @@
   "bind": [
     "$mainMod, r, exec, killall rofi || rofi -show drun -show-icons",
     "$mainMod, b, exec, killall rofi-rbw || rofi-rbw",
-    "$mainMod ALT, t, exec, kitty",
     "$mainMod ALT, f, exec, firefox",
     "$mainMod ALT, i, exec, idea-ultimate",
     "$mainMod ALT, m, exec, thunderbird",
+    "$mainMod, escape, exec, kitty" ,
     "$mainMod, ssharp, exec, kitty -e btop",
 
     "$mainMod, h, movefocus, l",

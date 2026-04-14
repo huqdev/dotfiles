@@ -64,7 +64,7 @@
   programs.steam.enable = true;
   users.defaultUserShell = pkgs.fish;
   home-manager.users.robert = ./robert.nix;
-    
+
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/phd.yaml";
@@ -89,6 +89,7 @@
   sops.age.keyFile = "/home/robert/.config/sops/age/keys.txt";
   
   environment.systemPackages = with pkgs; [
+    openvpn3
     sops
     nh
   ];

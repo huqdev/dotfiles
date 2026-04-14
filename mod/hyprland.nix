@@ -24,7 +24,7 @@ in {
         };
 
         misc = {
-          new_window_takes_over_fullscreen = 2;
+          #new_window_takes_over_fullscreen = 2;
         };
 
         binds = {
@@ -37,7 +37,6 @@ in {
         };
         
         workspace = builtins.map (number: "${builtins.toString number}, monitor:eDP-1") (lib.range 1 9);
-
 
         "$mainMod" = "SUPER";
       }

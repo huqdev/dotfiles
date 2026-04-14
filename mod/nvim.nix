@@ -37,6 +37,7 @@
       vscode-extensions.vscjava.vscode-java-debug
       vscode-langservers-extracted
       zls
+      gtk3
       # other stuff
       gcc
       git # for lazy
